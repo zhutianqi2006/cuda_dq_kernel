@@ -17,9 +17,11 @@ This library is an optimized adaptation built upon dq robotics, featuring a CUDA
 pip insatll .
 ``` 
 ## Performance
-batch size = 20000 tested on a  NVIDIA GeForce RTX™ 4080 laptops GPU. The relevant test codes can be found in: test_dual_franka_time.py and test_dual_ur_time.py.
+**Batch size**: 20,000 
 
-Task is calculating the time for performing 20,000 iterations of `relative_pose`,`absolute_pose`,`relative_pose_jacobian` and `absolute_pose_jacobian`.
+**Test task**: Measure the total time for **20,000 iterations** of  
+`relative_pose`, `absolute_pose`, `relative_pose_jacobian`, and `absolute_pose_jacobian`  
+(using scripts `test_dual_franka_time.py` and `test_dual_ur_time.py`).  
 
 || Intel Core i9-14900HX |  NVIDIA GeForce RTX™ 4080 laptop GPU  |
 | --- | -----| -----|
