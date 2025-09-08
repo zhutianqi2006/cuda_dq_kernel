@@ -605,7 +605,7 @@ __device__ __forceinline__ void get_w_inline(const scalar_t* __restrict__ dh, co
 }
 
 
-#define MAX_ITH 10  // Define an appropriate maximum value
+#define MAX_ITH 7  // Define an appropriate maximum value
 
 template <typename scalar_t>
 __device__ __forceinline__ void rel_abs_pose_rel_jac_inline(const scalar_t* dh1, const scalar_t* dh2,
@@ -1772,7 +1772,7 @@ __global__ void rel_dir_rect_kernel(
 
 
 template <typename scalar_t>
-__global__ __launch_bounds__(256, 2) void project_q_by_constraint_jacobian_kernel(
+__global__ __launch_bounds__(256, 1) void project_q_by_constraint_jacobian_kernel(
 const torch::PackedTensorAccessor<scalar_t, 1, torch::RestrictPtrTraits, size_t> dh1,
 const torch::PackedTensorAccessor<scalar_t, 1, torch::RestrictPtrTraits, size_t> dh2,
 const torch::PackedTensorAccessor<scalar_t, 2, torch::RestrictPtrTraits, size_t> base1,

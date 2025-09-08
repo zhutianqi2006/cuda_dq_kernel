@@ -27,6 +27,7 @@ def rel_abs_pose_rel_jac(
     theta1: torch.Tensor, theta2: torch.Tensor, 
     line_d: torch.Tensor, quat_line_ref: torch.Tensor,
     ith1:int, ith2:int, dh1_type:int, dh2_type:int) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]: ...
+
 def rel_abs_pose_rel_abs_jac(
     dh1: torch.Tensor, dh2: torch.Tensor, 
     base1: torch.Tensor, base2: torch.Tensor, 
